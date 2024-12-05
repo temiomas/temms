@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-weight: bold;
+            /* font-size: 0.9em; */
+        }
+    .main{
+            width: 700px;
+            height: 550px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 10px;
+            border: 5px solid black;
+            
+            
+    }
+    .columntable{
+       display: flex;
+       justify-content: space-between;
+    }
+    .for{
+        border: 3px solid rgb(146, 145,145);
+        display: block;
+        width: 15em;
+        height: 16em;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 7px;   
+    }
+    #filter{
+        border: 2px solid rgb(146, 145,145);
+        display: block;
+        width: 20em;
+        height: 17em;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 4px;
+        left: 100px;
+        margin-top: 30px;
+        
+    }
+    input[type="checkbox"] + label {
+        display: block;
+        margin: 0.2em;
+    }
+    input[type=checkbox]{
+        display: none;
+    }
+    input[type=checkbox] + label:before{
+        content: "\2714";
+        border: 0.1em solid skyblue;
+        border-radius: 0.2em;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        vertical-align: bottom;
+        color: transparent;
+    }
+    input[type=checkbox]:checked + label:before{
+        background-color: blue;
+        border-color: blue ;
+        color: white;
+        
+    }
+    button{
+    margin-left: 250px;
+    margin-top: 45px;
+    background-color: blue;
+    color: white;
+    border: 5px solid transparent;
+    }
+    .button a{
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: red;
+    border: 2px solid red;   
+    }
+
+.button .Execute {
+    border: none;
+    background-color: blue;
+    color: white;
+    /* margin-bottom: 50px; */
+    margin-left: 30px;
+   }
+.button{
+    margin-top: 50px;  
+      }
+.tab{
+    /* display: flex; */
+    line-height: 35px;
+}
+.tabs{
+    margin-left: 40px;
+}
+.tables{
+    display: flex;
+    
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <form action="" method="post">
+            <label for="Table name" style="font-weight: 400;" >Table Name <em style="color: red;">*</em></label> <br>
+            <input
+            type="text"
+            name="Table name"
+            maxlength="20"
+            minlength="3"
+            placeholder="Table Name"
+            size="30"
+            tableindex="-1" style="height: 30px; width: 230px; border-radius: 7px; font-size: smaller; padding: 4px; background-color: rgb(218, 214, 214);"</form> 
+            
+        </div> <br> <br>
+            <label for="columntable" style="font-weight: 70; font-family: Arial, Helvetica, sans-serif;">Column name <br>
+            <div class="columntable">
+
+                
+                <div class="for">
+                    <form >
+                        <input type="checkbox" checked id="box"> 
+                        <label for="box">Division</label> <br>
+                        <input type="checkbox"  id="box2">
+                        <label for="box2">Divison code</label> <br>
+                        <input type="checkbox"  id="box3"> 
+                        <label for="box3">Portfolio</label> <br>
+                        <input type="checkbox" id="box4"> 
+                        <label for="box4">Portfolio code</label> <br>
+                        <input type="checkbox"  id="box5"> 
+                        <label for="box5">Region</label> <br>
+                        <input type="checkbox"  id="box6"> 
+                        <label for="box6">Region code</label> <br>
+                        </form>
+                        <p>Tables</p>
+                        <div class="tables">
+                            
+                            <div class="tab">
+                                <label for="tables">
+                                    Tables 1
+                                    <img src="images/plug.PNG" alt="" width="20px">
+                                    <img src="images/circle2.PNG" alt="" width="15px">
+                                
+                                </label> <br>
+                                
+                                <label for="tables">
+                                    Table 2
+                                    <img src="images/plug.PNG" alt="" width="20px">
+                                    <img src="images/circle2.PNG" alt="" width="15px">
+    
+                                </label> <br>
+                                   
+                            
+                                <label for="Tables">
+                                    Table 3
+                                    <img src="images/plug.PNG" alt="" width="20px">
+                                    <img src="images/circle2.PNG" alt="" width="15px">
+
+                                </label>
+                                   
+                                <br>
+                                <br>
+
+                            </div>
+                            <div class="tabs">
+                                <label for="tables">
+                                    Table 4
+                                    <img src="images/plug.PNG" alt="" width="20px">
+                                    <img src="images/circle2.PNG" alt="" width="15px">
+                                </label>
+                                    
+                            
+
+                            </div>
+                            
+                        </div>
+                </div>
+                
+                   
+
+
+                <div id="filter" class="table">
+                    <label for="filtertable">
+                        <input type="checkbox" id="box7">
+                        <label for="box7">Division code </label><br>
+                        <input
+                         type="text"
+                         name=" Division code"
+                         maxlength="20"
+                         minlength="3"
+                         size="30"
+                         tabindex="-1" style="height: 30px; width: 230px; border-radius: 7px; font-size: smaller; padding: 4px; margin-left: 25px; background-color: rgb(218, 214, 214);"><br>
+            
+            
+            
+                        <input type="checkbox"  id="box8">
+                        <label for="box8">Portfolio code</label> <br>
+                        <input
+                         type="text"
+                         name="Portfolio code"
+                         maxlength="20"
+                         minlength="3"
+                         size="30"
+                         tabindex="-1" style="height: 30px; width: 230px; border-radius: 7px; font-size: smaller; padding: 4px; margin-left: 25px; background-color: rgb(218, 214, 214);"><br>
+            
+            
+            
+                         <input type="checkbox" id="box9">
+                         <label for="box9">Region code </label><br>
+                         <input
+                          type="text"
+                          name="Region code"
+                          maxlength="20"
+                          minlength="3"
+                          size="30"
+                          tabindex="-1" style="height: 30px; width: 230px; border-radius: 7px; font-size: smaller; padding: 4px; margin-left: 25px; background-color: rgb(218, 214, 214);"> 
+
+
+                    </label>
+                    <button>+ Add</button>
+
+                    <div class="button">
+                        <a href="#">Cancel</a>
+                        <a class="Execute">Execute</a>
+            
+                    </div>
+                </div>
+                
+            </div>
+            </label>
+            
+
+            </div>
+            
+    
+    
+</body>
+</html>
